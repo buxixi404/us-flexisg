@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use | SkillFlow</title>
+  <style>
+    :root {
+      --ink:#050505;
+      --muted:#565760;
+      --purple:#9d55ff;
+      --lavender:#e8d8ff;
+      --peach:#ffe2d5;
+      --yellow:#fff2bb;
+      --mint:#dff4e7;
+      --blue:#d9effb;
+      --violet:#e6dafb;
+      --shadow:0 24px 60px rgba(18,18,22,.12);
+      --shadow-strong:0 28px 70px rgba(18,18,22,.16);
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;overflow-x:hidden}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 6% 36%,rgba(255,220,205,.95),transparent 28%),
+        radial-gradient(circle at 48% 82%,rgba(248,239,191,.95),transparent 28%),
+        radial-gradient(circle at 90% 70%,rgba(206,240,233,.86),transparent 25%),
+        radial-gradient(circle at 96% 24%,rgba(226,216,255,.9),transparent 26%),
+        linear-gradient(135deg,#f8ede7 0%,#f7f4ef 42%,#f3f7f4 72%,#ede9fb 100%);
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    button,input,select{font:inherit}
+    .page-shell{width:min(100%,1440px);margin:0 auto;padding:18px}
+    .browser-frame{
+      position:relative;
+      min-height:calc(100vh - 36px);
+      border:2px solid rgba(255,255,255,.88);
+      border-radius:38px;
+      background:
+        radial-gradient(circle at 8% 70%,rgba(255,224,208,.7),transparent 24%),
+        radial-gradient(circle at 48% 88%,rgba(246,237,185,.68),transparent 24%),
+        radial-gradient(circle at 76% 76%,rgba(211,243,232,.54),transparent 28%),
+        radial-gradient(circle at 98% 34%,rgba(228,220,255,.58),transparent 28%),
+        linear-gradient(180deg,rgba(255,255,255,.94),rgba(255,255,255,.88));
+      overflow:hidden;
+      box-shadow:0 24px 60px rgba(20,18,38,.12);
+    }
+    .hero{position:relative;min-height:950px;padding:68px 56px 38px;isolation:isolate}
+    .hero::after{
+      content:"SKILLFLOW";
+      position:absolute;left:50%;bottom:-28px;transform:translateX(-50%);
+      font-size:clamp(80px,14vw,188px);line-height:1;letter-spacing:-.08em;font-weight:950;
+      color:rgba(5,5,5,.045);z-index:-1;white-space:nowrap;pointer-events:none;
+    }
+    .sparkle{position:absolute;width:22px;height:22px;background:#fff;opacity:.58;clip-path:polygon(50% 0%,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0% 50%,38% 38%)}
+    .sparkle.one{left:7%;top:36%}
+    .sparkle.two{right:17%;top:41%;width:16px;height:16px}
+    .dots{position:absolute;width:92px;height:92px;opacity:.32;background-image:radial-gradient(circle,rgba(5,5,5,.14) 0 2px,transparent 2.6px);background-size:16px 16px}
+    .dots.left{left:0;bottom:268px}
+    .dots.right{right:72px;top:362px}
+    .nav{position:relative;z-index:5;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:28px}
+    .brand{display:inline-flex;align-items:center;gap:16px;font-weight:950;font-size:32px;letter-spacing:-.07em}
+    .brand-mark{position:relative;width:42px;height:42px;display:inline-block}
+    .brand-mark::before,.brand-mark::after{content:"";position:absolute;bottom:0;background:#050505;clip-path:polygon(0 0,100% 100%,0 100%)}
+    .brand-mark::before{left:0;width:18px;height:42px}
+    .brand-mark::after{right:0;width:20px;height:30px}
+    .nav-links{justify-self:center;display:flex;align-items:center;gap:44px;color:#111;font-size:15px;font-weight:500}
+    .nav-actions{display:flex;align-items:center;gap:18px}
+    .btn{
+      min-height:52px;display:inline-flex;align-items:center;justify-content:center;padding:0 24px;border-radius:999px;border:0;
+      background:#050505;color:#fff;box-shadow:0 16px 34px rgba(0,0,0,.16);font-weight:800;font-size:15px;cursor:pointer;white-space:nowrap;transition:.22s ease;
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 22px 44px rgba(0,0,0,.22)}
+    .btn.secondary{background:rgba(255,255,255,.78);color:#050505;border:1px solid rgba(5,5,5,.1);box-shadow:0 12px 28px rgba(0,0,0,.08)}
+    .section-actions{display:flex;justify-content:center;margin-top:32px}
+    .menu-btn{width:54px;height:54px;border-radius:50%;border:1px solid rgba(5,5,5,.08);background:rgba(255,255,255,.78);display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.08)}
+    .menu-lines{display:grid;gap:5px}
+    .menu-lines span{display:block;width:18px;height:2px;background:#050505;border-radius:999px}
+    .hero-content{position:relative;z-index:4;max-width:880px;margin:76px auto 0;text-align:center}
+    .tag{
+      display:inline-flex;align-items:center;justify-content:center;min-height:32px;padding:0 18px;border-radius:12px;
+      border:1px solid rgba(157,85,255,.22);background:rgba(255,255,255,.62);font-weight:700;letter-spacing:.08em;font-size:13px;text-transform:uppercase;
+    }
+    h1{margin:26px 0 22px;font-size:clamp(54px,7vw,96px);line-height:1.02;letter-spacing:-.055em;font-weight:950;text-transform:uppercase}
+    .highlight{position:relative;display:inline-block;padding:0 12px 4px;z-index:1}
+    .highlight::before{content:"";position:absolute;left:-6px;right:-6px;top:16%;bottom:8%;border-radius:12px;background:rgba(218,194,255,.82);z-index:-1;transform:rotate(-1.5deg)}
+    .highlight::after{display:none}
+    .hero-sub{width:min(660px,100%);margin:0 auto;color:#27272a;font-size:16px;line-height:1.5}
+    .quick-form{
+      width:min(760px,100%);
+      margin:30px auto 0;
+      padding:26px;
+      border-radius:30px;
+      border:1px solid rgba(5,5,5,.08);
+      background:rgba(255,255,255,.64);
+      box-shadow:inset 0 0 20px rgba(255,255,255,.6),0 18px 42px rgba(30,30,30,.08);
+      backdrop-filter:blur(18px);
+      text-align:left;
+    }
+    .quick-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      align-items:end;
+    }
+    .quick-grid .wide{grid-column:span 2}
+    label{display:block;margin:0 0 6px;color:#333;font-size:12px;font-weight:800}
+    input,select{width:100%;height:50px;border:1px solid rgba(5,5,5,.1);border-radius:16px;background:rgba(255,255,255,.84);padding:0 14px;outline:0;color:#111;font-size:14px}
+    input:focus,select:focus{border-color:rgba(157,85,255,.52);box-shadow:0 0 0 4px rgba(157,85,255,.1)}
+    .consent{display:flex;gap:10px;margin:12px 0 14px;color:#555761;font-size:12px;line-height:1.45}
+    .consent input{width:17px;height:17px;margin-top:1px;flex:0 0 auto}
+    .quick-bottom{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center}
+    .form-note{color:#626262;font-size:12px;line-height:1.45}
+    .polaroids{position:relative;z-index:3;width:min(1120px,100%);height:306px;margin:52px auto 0}
+    .polaroid{
+      position:absolute;width:230px;height:268px;padding:12px 12px 10px;border-radius:22px;background:#fff;
+      box-shadow:0 22px 42px rgba(18,18,22,.14);transform-origin:center bottom;transition:.25s ease;
+    }
+    .polaroid:hover{transform:translateY(-10px) rotate(0deg) scale(1.02)!important;box-shadow:0 30px 60px rgba(18,18,22,.18);z-index:20}
+    .tilt-1{left:0;top:54px;transform:rotate(-6deg)}
+    .tilt-2{left:220px;top:24px;transform:rotate(5deg);z-index:3}
+    .tilt-3{left:445px;top:54px;transform:rotate(-4deg);z-index:5}
+    .tilt-4{right:220px;top:24px;transform:rotate(4deg);z-index:4}
+    .tilt-5{right:0;top:48px;transform:rotate(-5deg);z-index:2}
+    .portrait{position:relative;height:184px;border-radius:14px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .portrait img{width:100%;height:100%;object-fit:cover;display:block}
+    .portrait.peach{background:#ffd8cf}
+    .portrait.yellow{background:#f6ebba}
+    .portrait.mint{background:#d8f1df}
+    .portrait.blue{background:#d7ecfb}
+    .portrait.lavender{background:#e5d8fb}
+    .caption{margin:10px 4px 0;color:#111;font-family:"Comic Sans MS","Segoe Print",cursive;font-size:14px;line-height:1.18;text-align:center}
+    .section{padding:88px 0;background:rgba(255,255,255,.54)}
+    .section:nth-of-type(even){background:rgba(255,255,255,.34)}
+    .container{width:min(var(--max),calc(100% - 40px));margin:0 auto;position:relative}
+    .section-title{width:min(760px,100%);margin:0 auto 42px;text-align:center}
+    .kicker{color:var(--purple);text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:950;margin-bottom:12px}
+    h2{margin:0;font-size:clamp(34px,4.8vw,58px);line-height:1.05;letter-spacing:-.06em;font-weight:950}
+    .section-title p{margin:16px auto 0;color:var(--muted);font-size:17px;line-height:1.65}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{border-radius:28px;background:rgba(255,255,255,.76);border:1px solid rgba(255,255,255,.95);box-shadow:0 16px 42px rgba(15,15,20,.08);backdrop-filter:blur(18px);padding:26px}
+    .step-no{width:48px;height:48px;display:grid;place-items:center;border-radius:16px;background:#050505;color:#fff;font-weight:950;margin-bottom:28px}
+    h3{margin:0 0 10px;font-size:21px;letter-spacing:-.035em}
+    .card p{margin:0;color:var(--muted);line-height:1.66;font-size:15px}
+    .icon{width:56px;height:56px;display:grid;place-items:center;border-radius:20px;background:linear-gradient(135deg,rgba(157,85,255,.14),rgba(41,212,255,.12));font-size:23px;margin-bottom:18px}
+    .payout{margin:18px 0 16px;padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.7);border:1px solid rgba(5,5,5,.06);color:#3d3d45;font-size:14px;line-height:1.45}
+    .text-link{display:inline-flex;font-weight:950;font-size:14px}
+    .form-section{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}
+    .form-card{padding:34px;border-radius:34px;background:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.95);box-shadow:var(--shadow)}
+    .form-card h2{margin-bottom:12px}
+    .form-card>p{color:var(--muted);line-height:1.62;margin:0 0 24px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+    .full{grid-column:1/-1}
+    .checkline{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:13px;line-height:1.5;margin:14px 0 18px}
+    .checkline input{width:18px;height:18px;flex:0 0 auto;margin-top:2px}
+    .form-card .btn{width:100%}
+    .faq-wrap{width:min(900px,100%);margin:0 auto;display:grid;gap:13px}
+    .faq-item{cursor:pointer}
+    .faq-q{display:flex;justify-content:space-between;align-items:center;gap:20px;font-weight:950;letter-spacing:-.02em}
+    .faq-item p{max-height:0;opacity:0;overflow:hidden;transition:.28s ease}
+    .faq-item.active p{max-height:180px;opacity:1;margin-top:12px}
+    .faq-plus{width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:rgba(157,85,255,.1);color:var(--purple);flex:0 0 auto;transition:.25s ease}
+    .faq-item.active .faq-plus{transform:rotate(45deg)}
+    .cta-box{padding:74px 30px;text-align:center;border-radius:44px;background:radial-gradient(circle at 20% 20%,rgba(255,199,174,.44),transparent 34%),radial-gradient(circle at 80% 78%,rgba(169,156,255,.32),transparent 34%),rgba(255,255,255,.76);border:1px solid rgba(255,255,255,.95);box-shadow:var(--shadow)}
+    .cta-box h2{margin-bottom:14px}
+    .cta-box p{max-width:620px;margin:0 auto 26px;color:var(--muted);font-size:17px;line-height:1.62}
+    footer{padding:70px 0 32px;background:rgba(255,255,255,.74);border-top:1px solid rgba(5,5,5,.06)}
+    .footer-grid{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:start}
+    .footer-logo{display:flex;align-items:center;gap:12px;font-size:34px;font-weight:950;letter-spacing:-.08em;margin-bottom:12px}
+    .footer-logo .brand-mark{width:30px;height:30px}
+    .footer-info{max-width:720px;color:var(--muted);line-height:1.65}
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap;font-weight:850}
+    .bottom{margin-top:32px;padding-top:22px;border-top:1px solid rgba(5,5,5,.08);color:var(--muted);font-size:14px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:1120px){
+      .quick-form{width:min(760px,100%);margin-top:14px}
+      .quick-grid{grid-template-columns:repeat(3,1fr)}
+      .quick-grid .wide{grid-column:span 2}
+      .hero{min-height:auto;padding:42px 34px 64px}
+      .nav{
+        grid-template-columns:auto 1fr;
+        padding:0 6px;
+        width:100%;
+      }
+      .nav-links{display:none}
+      .nav-actions{justify-self:end}
+      .hero-content{margin-top:50px}
+      h1{margin-bottom:10px}
+      .hero-sub{line-height:1.42}
+      .polaroids{
+        height:auto;
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:22px;
+        margin-top:22px;
+      }
+      .polaroid{
+        position:relative;
+        left:auto!important;
+        right:auto!important;
+        top:auto!important;
+        width:100%;
+        height:332px;
+        padding-bottom:10px;
+        transform:none!important;
+      }
+      .portrait{height:260px}
+      .caption{margin-top:9px;min-height:0}
+      .grid-4,.grid-3{grid-template-columns:repeat(2,1fr)}
+      .form-section{grid-template-columns:1fr}
+    }
+    @media(max-width:760px){
+      .page-shell{padding:10px}
+      .browser-frame{border-radius:28px}
+      .hero{padding:34px 18px 48px}
+      .brand{font-size:24px}
+      .brand-mark{width:32px;height:32px}
+      .menu-btn{display:none}
+      .hero-content{margin-top:44px}
+      h1{font-size:clamp(42px,13vw,62px);margin-bottom:8px}
+      .hero-sub{font-size:15px;line-height:1.38}
+      .quick-form{margin-top:12px}
+      .quick-grid,.quick-bottom{grid-template-columns:1fr}
+      .quick-grid .wide{grid-column:span 2}
+      .quick-form .btn{width:100%}
+      .polaroids{grid-template-columns:1fr;margin-top:20px}
+      .polaroid{height:335px;padding-bottom:10px}
+      .portrait{height:282px}
+      .caption{margin-top:9px;min-height:0}
+      .grid-4,.grid-3{grid-template-columns:1fr}
+      .form-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr}
+      .section{padding:64px 0}
+      .container{width:min(100% - 26px,var(--max))}
+    }
+  
+    .simple-page{padding:34px 0 80px}
+    .simple-shell{
+      position:relative;
+      min-height:calc(100vh - 36px);
+      border:2px solid rgba(255,255,255,.85);
+      border-radius:38px;
+      background:
+        radial-gradient(circle at 8% 70%,rgba(255,224,208,.65),transparent 24%),
+        radial-gradient(circle at 48% 88%,rgba(246,237,185,.62),transparent 22%),
+        radial-gradient(circle at 78% 74%,rgba(211,243,232,.50),transparent 26%),
+        radial-gradient(circle at 98% 34%,rgba(228,220,255,.52),transparent 26%),
+        linear-gradient(180deg,rgba(255,255,255,.94),rgba(255,255,255,.88));
+      overflow:hidden;
+      box-shadow:0 24px 60px rgba(20,18,38,.12);
+      padding:46px 56px 64px;
+    }
+    .simple-nav{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:28px;position:relative;z-index:5}
+    .simple-hero{text-align:center;max-width:880px;margin:74px auto 44px}
+    .simple-hero h1{margin:18px 0 16px;font-size:clamp(44px,6vw,82px);line-height:1.02;letter-spacing:-.055em;font-weight:950;text-transform:uppercase}
+    .simple-hero p{max-width:720px;margin:0 auto;color:#27272a;font-size:17px;line-height:1.6}
+    .content-panel{
+      width:min(920px,100%);
+      margin:0 auto;
+      border-radius:34px;
+      background:rgba(255,255,255,.76);
+      border:1px solid rgba(255,255,255,.95);
+      box-shadow:var(--shadow);
+      padding:34px;
+    }
+    .content-panel h2{font-size:clamp(28px,3.6vw,44px);margin:0 0 18px;text-transform:none}
+    .content-panel h3{margin:28px 0 10px}
+    .content-panel p,.content-panel li{color:var(--muted);font-size:16px;line-height:1.68}
+    .content-panel ul{margin:10px 0 0;padding-left:22px}
+    .next-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+    .notice-box{margin-top:28px;padding:22px;border-radius:22px;background:rgba(255,245,225,.78);border:1px solid rgba(5,5,5,.08)}
+    .closing-message{text-align:center;margin-top:30px}
+    .simple-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+    @media(max-width:1120px){
+      .simple-shell{padding:42px 34px 64px}
+      .simple-nav{grid-template-columns:auto auto}
+      .simple-nav .nav-links{display:none}
+      .simple-nav .nav-actions{justify-self:end}
+      .next-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:760px){
+      .simple-page{padding:10px 0 50px}
+      .simple-shell{border-radius:28px;padding:34px 18px 54px}
+      .simple-hero{margin-top:54px}
+      .content-panel{padding:24px;border-radius:28px}
+    }
+
+    /* Soft entrance animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(26px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes softPop {
+      from { opacity: 0; transform: translateY(20px) scale(.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes cardFloatIn {
+      from { opacity: 0; transform: translateY(34px) rotate(0deg) scale(.94); }
+      to { opacity: 1; }
+    }
+
+    @keyframes glowPulse {
+      0%, 100% { opacity: .45; transform: scale(1); }
+      50% { opacity: .8; transform: scale(1.08); }
+    }
+
+    .brand, .nav-links, .nav-actions {
+      animation: fadeUp .7s ease both;
+    }
+
+    .nav-links { animation-delay: .08s; }
+    .nav-actions { animation-delay: .16s; }
+
+    .tag {
+      animation: softPop .7s ease both .15s;
+    }
+
+    .hero-content h1,
+    .simple-hero h1 {
+      animation: fadeUp .8s cubic-bezier(.2,.8,.2,1) both .24s;
+    }
+
+    .hero-sub,
+    .simple-hero p {
+      animation: fadeUp .8s cubic-bezier(.2,.8,.2,1) both .34s;
+    }
+
+    .quick-form,
+    .content-panel {
+      animation: fadeUp .8s cubic-bezier(.2,.8,.2,1) both .44s;
+    }
+
+    .polaroid {
+      animation: cardFloatIn .8s cubic-bezier(.2,.8,.2,1) both;
+    }
+
+    .polaroid:nth-child(1) { animation-delay: .46s; }
+    .polaroid:nth-child(2) { animation-delay: .54s; }
+    .polaroid:nth-child(3) { animation-delay: .62s; }
+    .polaroid:nth-child(4) { animation-delay: .70s; }
+    .polaroid:nth-child(5) { animation-delay: .78s; }
+
+    .card, .cta-box {
+      animation: fadeUp .7s ease both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 24%;
+    }
+
+    .sparkle {
+      animation: glowPulse 3s ease-in-out infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="page-shell simple-page">
+    <div class="simple-shell">
+      <nav class="simple-nav" aria-label="Main navigation">
+        <a href="index.html#top" class="brand"><span class="brand-mark"></span><span>SkillFlow</span></a>
+        <div class="nav-links"><a href="index.html#process">How It Works</a><a href="index.html#assignments">Available Assignments</a><a href="index.html#why">Why Join</a><a href="index.html#faq">FAQ</a></div>
+        <div class="nav-actions"><a class="btn" href="index.html#apply">Apply Now</a><button class="menu-btn" type="button" aria-label="Open menu"><span class="menu-lines"><span></span><span></span><span></span></span></button></div>
+      </nav>
+      
+      <div class="simple-hero">
+        <div class="tag">Terms of Use</div>
+        <h1>Terms of Use</h1>
+        <p>Please read these terms before submitting an application or participating in assignment-based opportunities through SkillFlow.</p>
+      </div>
+      <div class="content-panel">
+        <h3>Nature of Relationship</h3>
+        <p>Participation through SkillFlow is on an independent assignment basis unless otherwise stated in writing. Submitting an application does not create an employment relationship.</p>
+        <h3>Assignment Availability</h3>
+        <p>Available assignments depend on business demand, operational requirements, and applicant suitability. We do not guarantee assignment volume, frequency, or selection.</p>
+        <h3>Assignment Fees and Payout</h3>
+        <p>Where applicable, payout details are shared before an assignment is accepted. Payment is made only for work that is completed, reviewed, and approved according to the stated requirements.</p>
+        <h3>Applicant Responsibility</h3>
+        <p>You are responsible for ensuring that the information you submit is accurate and up to date.</p>
+        <h3>Confidentiality</h3>
+        <p>Where assignments involve business, client, or internal information, you must keep such information confidential and must not disclose it without authorisation.</p>
+        <h3>Platform and Communication</h3>
+        <p>Our team may communicate with you through official channels such as WhatsApp or email for coordination purposes.</p>
+        <h3>Anti-Scam Position</h3>
+        <p>SkillFlow will never ask applicants to pay money in order to apply, be shortlisted, receive training, or access assignments.</p>
+      </div>
+</div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo"><span class="brand-mark"></span>SkillFlow</div>
+          <div class="footer-info">Location: Singapore<br><br>SkillFlow coordinates assignment-based opportunities. Participation is subject to review, suitability, and assignment availability. Assignment volume and payout are not guaranteed.</div>
+        </div>
+        <div class="footer-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-use.html">Terms of Use</a>
+          <a href="anti-scam-notice.html">Anti-Scam Notice</a>
+        </div>
+      </div>
+      <div class="bottom"><span>© 2026 SkillFlow. All rights reserved.</span><span>No application fees. No paid membership required.</span></div>
+    </div>
+  </footer>
+
+</body>
+</html>
